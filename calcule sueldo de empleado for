@@ -1,0 +1,38 @@
+#include "stdafx.h"
+#include "stdafx.h"  
+#include <iostream>  
+#include "conio.h"   
+//Declarar constantes
+#define N 100
+#define AFP 0.121
+#define IVA 0.13
+#define MAX 100
+using namespace std;
+
+void main ()
+{
+	float salarioneto, salariobruto;
+	//Validar
+	do{
+	   cout<<"Ingrese el numero de empleados:"<<endl;
+	   cin>>N;
+	} while ((N>MAX)||(N<0));
+		//Fin validar
+	//ciclo repetitivo
+	for (int i=0; i<N; i++)
+	{
+		cout<<"ingrese el sueldo bruto";
+		cin>>salariobruto;
+		if (salariobruto>2*1850)
+		{
+			salarioneto=salariobruto-salariobruto*(IVA+AFP);
+		}
+		else
+		{
+			salarioneto=salariobruto-salariobruto*(AFP);
+		}
+		cout<<"El salario es:"<<salarioneto;
+	}
+	getch ();
+}
+
