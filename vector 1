@@ -1,0 +1,44 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+ using namespace std;
+ // prototipos
+ 
+ void cargar (double a[], int tam);
+ void mostrar (double a[], int tam);
+ double promedio (double a[], int tam);
+ void burbuja(double a[], int tam);
+ int busquedalineal (double a[], int b, int tam);
+ 
+ 
+ void main ()
+ {
+ 	int tam, n, pos; 
+ 	double vec [MAX], prom, k;
+ 	do
+ 	{
+ 		cout<<"Ingrese el numero de elementos del vector";
+ 		cin>>n;
+ 	} while ((0>=n)||(n>MAX));
+ 	cargar (vec,n);
+ 	cout<<"Los numeros son:"<<endl;
+ 	mostrar(vec,n);
+ 	//llamada a la funcion del vector solo se coloca el nombre
+ 	//busqueda de un elemento en el vector
+ 	getch ();
+ }
+ void cargar (double a[], int tam)
+  {
+ 	for (int i=0;i<=tam;i++)
+ 	{
+ 		cout<<"Los numeros son:"<<"a["<<i<<"]"<<endl;
+ 		cin>>a[i];
+ 		}
+ }
+ void mostrar (double a[], int tam)
+ {
+ 	for (int j=0; j<=tam; j++)
+ 		cout<<"Los numeros son:"<<"a["<<j<<"]"<<a[j];
+ }
+ 	
